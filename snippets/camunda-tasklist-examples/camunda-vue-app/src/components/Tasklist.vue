@@ -25,6 +25,7 @@
             <h2> Approve Data</h2>
             <h2> MyData</h2>
             
+            <sui-menu :widths="4">
             <sui-list-item>
               <sui-list-icon name="calendar alternate" />
               <sui-list-content> Set follow-up date</sui-list-content>
@@ -35,14 +36,15 @@
             </sui-list-item>
             <sui-list-item icon="th" content="Add groups"></sui-list-item>
             <sui-list-item icon="user" content="Claim"></sui-list-item>
+            </sui-menu>
 
-            <sui-menu :widths="4">
+            <sui-menu>
             <sui-menu-item>Form</sui-menu-item>
             <sui-menu-item>History</sui-menu-item>
             <sui-menu-item active>Diagrams</sui-menu-item>
             <sui-menu-item>Description</sui-menu-item>
             </sui-menu>
-            
+
             <generic-form v-if="this.$route.params.taskId" :taskId="this.$route.params.taskId" :formKey="taskFormKey"></generic-form>
             <div v-if="!this.$route.params.taskId">
               <p>Please choose task.</p>
